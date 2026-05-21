@@ -1,6 +1,6 @@
 cask "quietfinance" do
   version "2.6.0"
-  sha256 :no_check  # set by scripts/release.sh output
+  sha256 "64902685c4c79c64319677f9629cce0265f537b7584f05e147543fd896719896"  # set by scripts/release.sh output
 
   url "https://github.com/quietapps/QuietFinance/releases/download/#{version}/QuietFinance-#{version}.zip",
       verified: "github.com/quietapps/QuietFinance/"
