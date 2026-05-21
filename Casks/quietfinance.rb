@@ -1,6 +1,6 @@
 cask "quietfinance" do
   version "2.6.0"
-  sha256 "64902685c4c79c64319677f9629cce0265f537b7584f05e147543fd896719896"  # set by scripts/release.sh output
+  sha256 "f74b9b55eb5658bddaf8588169877e0981c2c3836fcb77d9122738c13bd0cabe"  # set by scripts/release.sh output
 
   url "https://github.com/quietapps/QuietFinance/releases/download/v#{version}/QuietFinance-#{version}.zip",
       verified: "github.com/quietapps/QuietFinance/"
@@ -16,16 +16,16 @@ cask "quietfinance" do
   auto_updates false
   depends_on macos: ">= :tahoe"
 
-  app "QuietFinance.app"
+  app "Quiet Finance.app"
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/QuietFinance.app"],
+                   args: ["-cr", "#{appdir}/Quiet Finance.app"],
                    sudo: false
     system_command "/System/Library/Frameworks/CoreServices.framework/" \
                    "Versions/A/Frameworks/LaunchServices.framework/" \
                    "Versions/A/Support/lsregister",
-                   args: ["-f", "#{appdir}/QuietFinance.app"],
+                   args: ["-f", "#{appdir}/Quiet Finance.app"],
                    sudo: false,
                    must_succeed: false
   end
@@ -47,6 +47,6 @@ cask "quietfinance" do
       3. Click "Open" in the dialog
 
     Or run once in Terminal:
-      xattr -cr "/Applications/QuietFinance.app"
+      xattr -cr "/Applications/Quiet Finance.app"
   EOS
 end
