@@ -16,7 +16,7 @@ cask "quietfinance" do
   auto_updates false
   depends_on macos: ">= :tahoe"
 
-  app "Quiet Finance.app"
+  app "QuietFinance.app"
 
   postflight do
     system_command "/usr/bin/xattr",
