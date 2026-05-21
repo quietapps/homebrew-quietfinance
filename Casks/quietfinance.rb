@@ -20,12 +20,12 @@ cask "quietfinance" do
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Quiet Finance.app"],
+                   args: ["-cr", "#{appdir}/QuietFinance.app"],
                    sudo: false
     system_command "/System/Library/Frameworks/CoreServices.framework/" \
                    "Versions/A/Frameworks/LaunchServices.framework/" \
                    "Versions/A/Support/lsregister",
-                   args: ["-f", "#{appdir}/Quiet Finance.app"],
+                   args: ["-f", "#{appdir}/QuietFinance.app"],
                    sudo: false,
                    must_succeed: false
   end
@@ -43,10 +43,10 @@ cask "quietfinance" do
     Gatekeeper attributes automatically, but if the app refuses to launch:
 
       1. Open Finder → /Applications
-      2. Right-click Quiet Finance.app → Open
+      2. Right-click QuietFinance.app → Open
       3. Click "Open" in the dialog
 
     Or run once in Terminal:
-      xattr -cr "/Applications/Quiet Finance.app"
+      xattr -cr "/Applications/QuietFinance.app"
   EOS
 end
