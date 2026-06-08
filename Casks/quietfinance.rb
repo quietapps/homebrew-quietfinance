@@ -14,7 +14,7 @@ cask "quietfinance" do
   end
 
   auto_updates false
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Quiet Finance.app"
 
